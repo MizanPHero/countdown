@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Launch Countdown Timer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;600;700&display=swap" rel="stylesheet" />
+    <!-- Font Awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Jequery Plugin  -->
+    <link href="flipTimer.css" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="jquery.flipTimer.js"></script>
+    <!-- My CSS -->
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+
+<body>
+
+    <article>
+        <h1>We're launching soon</h1>
+
+        <div class="flipTimer">
+            <div class="days">
+                <div class="subnote">Days</div>
+            </div>
+            <div class="hours">
+                <div class="subnote">Hours</div>
+            </div>
+            <div class="minutes">
+                <div class="subnote">Minutes</div>
+            </div>
+            <div class="seconds">
+                <div class="subnote">Seconds</div>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <div class="container-bottom">
+            <a href="#">
+                <i class="fa-brands fa-facebook-square"></i>
+                <span class="sr-only">Facebook</span>
+            </a>
+            <a href="#">
+                <i class="fa-brands fa-pinterest"></i>
+                <span class="sr-only">Pinterest</span>
+            </a>
+            <a href="#">
+                <i class="fa-brands fa-instagram"></i>
+                <span class="sr-only">Instagram</span>
+            </a>
+        </div>
+    </footer>
+
+
+
+    <script>
+        $(document).ready(function () {
+            $('.flipTimer').flipTimer({
+
+                // count up or countdown
+                direction: 'down',
+
+                // the target <a href="https://www.jqueryscript.net/time-clock/">date</a>
+                date: 'November 14, 2022 08:30:30',
+
+                // callback works only with direction = "down"
+                callback: function () { alert('times up!'); }
+
+            });
+        });
+    </script>
+
+</body>
+
+</html>

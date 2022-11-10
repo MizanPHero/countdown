@@ -1,0 +1,84 @@
+:root {
+    --dark-purple: hsl(251, 16%, 14%);
+    --gray-blue: hsl(237, 18%, 59%);
+    --soft-red: hsl(345, 95%, 68%);
+    --blue-600: hsl(236, 21%, 26%);
+    --blue-700: hsl(235, 16%, 14%);
+    --blue-800: hsl(234, 17%, 12%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    background-color: var(--dark-purple);
+    background-image: url("pattern-hills.svg"), url("bg-stars.svg");
+    background-repeat: no-repeat;
+    background-position: bottom 0 right 15%, center;
+    background-size: auto 40%, cover;
+    font-family: "Red Hat Text", sans-serif;
+    color: var(--gray-blue);
+}
+
+article h1 {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 3.5rem;
+}
+
+article .flipTimer {
+    display: flex;
+    gap: 2rem;
+    color: var(--soft-red);
+}
+
+article .flipTimer .span {
+    color: var(--gray-blue);
+}
+
+
+
+a {
+    margin: 2rem;
+    font-size: 2rem;
+    color: var(--gray-blue);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--soft-red);
+}
+
+
+.days,
+.hours,
+.minutes,
+.seconds {
+    position: relative;
+}
+
+
+.subnote {
+    font-size: 20px;
+    position: absolute;
+    top: 80%;
+    left: 30%;
+    color: var(--gray-blue)
+}
+
+.minutes .subnote {
+    left: 27%;
+}
+
+.seconds .subnote {
+    left: 25%;
+}
